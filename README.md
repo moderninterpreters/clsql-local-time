@@ -1,9 +1,9 @@
 # clsql-local-time
-### _Your Name <your.name@example.com>_
+### Arnold Noronha <arnold@jipr.io>_
 
-This is a project to do ... something.
+This simple library allows the use of local-time:timestamp objects in
+CLSQL models and queries.
 
 ## License
 
-Specify license here
-
+MIT License, see LICENSE file
