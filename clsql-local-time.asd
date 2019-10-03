@@ -1,7 +1,7 @@
 ;;;; clsql-local-time.asd
 
 (asdf:defsystem #:clsql-local-time
-  :description "Describe clsql-local-time here"
+  :description "Allows the use of local-time:timestamp objects in CLSQL models and queries"
   :author "Arnold Noronha <arnold@jipr.io>"
   :license  "MIT license"
   :version "0.0.1"
