@@ -13,4 +13,4 @@
   (clsql-sys::database-output-sql (local-time:format-timestring nil time :format '(:year "-" :month "-" :day " " :hour ":" :min ":" :sec " " :timezone ) :timezone local-time:+utc-zone+) database))
 
 (defmethod clsql-sys:database-get-type-specifier ((type (eql 'local-time:timestamp)) args database db-type)
-  (datbase-get-type-specifier 'clsql:wall-time args database db-type))
+  (clsql-sys:database-get-type-specifier 'clsql:wall-time args database db-type))
