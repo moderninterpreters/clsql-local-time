@@ -10,7 +10,15 @@
         ret))))
 
 (defmethod clsql-sys::database-output-sql ((time local-time:timestamp) database)
-  (clsql-sys::database-output-sql (local-time:format-timestring nil time :format '(:year "-" :month "-" :day " " :hour ":" :min ":" :sec " " :timezone ) :timezone local-time:+utc-zone+) database))
+    (clsql-sys::database-output-sql
+     (local-time:format-timestring
+      nil time :format
+      '((:year 4) "-"
+        (:month  2) "-"
+        (:day  2) " "
+        (:hour 2) ":"
+        (:min  2) ":"
+        (:sec  2) " " :timezone ) :timezone local-time:+utc-zone+) database))
 
 (defmethod clsql-sys:database-get-type-specifier ((type (eql 'local-time:timestamp)) args database db-type)
   (clsql-sys:database-get-type-specifier 'clsql:wall-time args database db-type))
